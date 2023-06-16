@@ -1,11 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Chamada das fontes do google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <!-- Junção das páginas de css e js -->
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Título da página -->
+    <title>Conversor de Unidades</title>
 </head>
 <body>
+    <!-- Divisão do título e do formulário -->
+    <div class="container">
+        <!-- Título -->
+        <div class="titulo">
+            <h1>Conversor de <br> unidades</h1>
+            <p>By <a href="https://github.com/Thzzao">Thiago Souza</a></p>
+        </div>
+        <!-- Divisão para melhor estilização do formulário -->
+        <div class="formulario">
+            <form>
+                <p class="legenda">Campos marcados com * são obrigatórios.</p>
+                <label class="categoria">Selecione a categoria:</label>
+                <!-- Seleção da categoria da conversão -->
+                <select>
+                    <option>Comprimento</option>
+                    <option>Peso</option>
+                    <option>Temperatura</option>
+                </select>
     
+                <label class="" >Quero converter*:</label>
+                <!-- Entrada do valor -->
+                <input type="number" id="valor" placeholder="Digite o valor!" required />
+    
+                <!-- Seleção da unidade de entrada -->
+                <Select>   
+                    <ul id="lista-unidades-entrada">
+                        <!-- Unidades de comprimento -->
+                        <li><option>Metros</option></li>
+                        <li><option>Centímetros</option></li>
+                        <li><option>Polegadas</option></li>
+                        <!-- Unidades de peso -->
+                        <li><option>Quilogramas</option></li>
+                        <li><option>Gramas</option></li>
+                        <li><option>Libras</option></li>
+                        <!-- Unidades de temperatura -->
+                        <li><option>Celsius</option></li>
+                        <li><option>Fahrenheit</option></li>
+                        <li><option>Kelvin</option></li>
+                    </ul>
+                </select>
+    
+                <label class="" >Para:</label>
+                <!-- Seleção da unidade de saída -->
+                <Select>
+                    <ul id="lista-unidades-saida">
+                        <!-- Unidades de comprimento -->
+                        <li><option>Metros</option></li>
+                        <li><option>Centímetros</option></li>
+                        <li><option>Polegadas</option></li>
+                        <!-- Unidades de peso -->
+                        <li><option>Quilogramas</option></li>
+                        <li><option>Gramas</option></li>
+                        <li><option>Libras</option></li>
+                        <!-- Unidades de temperatura -->
+                        <li><option>Celsius</option></li>
+                        <li><option>Fahrenheit</option></li>
+                        <li><option>Kelvin</option></li>
+                    </ul>
+                </select>
+    
+                <!-- Botão para realizar a conversão -->
+                <button class="" type="submit" onclick="">Converter</button>
+    
+                <!-- Caixa do resultado -->
+                <div class="resultado">
+                    <p>Resultado</p>
+                </div>        
+
+    </div>
+        </form>
+    </div>
 </body>
 </html>
