@@ -24,62 +24,57 @@
       <!-- Divisão para melhor estilização do formulário -->
       <div class="formulario">
          <form>
-            <label class="categoria">Selecione a categoria:</label>
+            <label for="categoria">Selecione a categoria:</label>
             <!-- Seleção da categoria da conversão -->
-            <select id="categoria">
+            <select id="categoria" onchange="atualizarUniEntrada()">
                <option value="COMP">Comprimento</option>
                <option value="PESO">Peso</option>
                <option value="TEMP">Temperatura</option>
             </select>
             
-            <label class="" >Quero converter:</label>
+            <label for="valor" >Quero converter:</label>
             <!-- Entrada do valor -->
-            <input type="number" id="valor" placeholder="Digite o valor!" required />
+            <input type="number" id="valor" placeholder="Digite o valor" required />
             
             <!-- Seleção da unidade de entrada -->
-            <Select id="uniEntrada">   
-               <ul id="lista-unidades-entrada">
-                  <!-- Unidades de comprimento -->
-                  <li><option value="m">Metros</option></li>
-                  <li><option value="cm">Centímetros</option></li>
-                  <li><option value="pol">Polegadas</option></li>
-                  <!-- Unidades de peso -->
-                  <li><option value="kg">Quilogramas</option></li>
-                  <li><option value="g">Gramas</option></li>
-                  <li><option value="lb">Libras</option></li>
-                  <!-- Unidades de temperatura -->
-                  <li><option value="C">Celsius</option></li>
-                  <li><option value="F">Fahrenheit</option></li>
-                  <li><option value="K">Kelvin</option></li>
-               </ul>
+            <label for="uniEntrada">De:</label>
+            <Select id="uniEntrada" onchange="atualizarUniDestino()">   
+               <!-- Unidades de comprimento -->
+               <option value="m">Metros</option>
+               <option value="cm">Centímetros</option>
+               <option value="pol">Polegadas</option>
+               <!-- Unidades de peso -->
+               <option value="kg">Quilogramas</option>
+               <option value="g">Gramas</option>
+               <option value="lb">Libras</option>
+               <!-- Unidades de temperatura -->
+               <option value="C">Celsius</option>
+               <option value="F">Fahrenheit</option>
+               <option value="K">Kelvin</option>
             </select>
             
-            <label class="" >Para:</label>
+            <label for="uniSaida" >Para:</label>
             <!-- Seleção da unidade de saída -->
             <Select id="uniSaida">
-               <ul id="lista-unidades-saida">
-                  <!-- Unidades de comprimento -->
-                  <li><option value="m">Metros</option></li>
-                  <li><option value="cm">Centímetros</option></li>
-                  <li><option value="pol">Polegadas</option></li>
-                  <!-- Unidades de peso -->
-                  <li><option value="kg">Quilogramas</option></li>
-                  <li><option value="g">Gramas</option></li>
-                  <li><option value="lb">Libras</option></li>
-                  <!-- Unidades de temperatura -->
-                  <li><option value="C">Celsius</option></li>
-                  <li><option value="F">Fahrenheit</option></li>
-                  <li><option value="K">Kelvin</option></li>
-               </ul>
+               <!-- Unidades de comprimento -->
+               <option value="m">Metros</option>
+               <option value="cm">Centímetros</option>
+               <option value="pol">Polegadas</option>
+               <!-- Unidades de peso -->
+               <option value="kg">Quilogramas</option>
+               <option value="g">Gramas</option>
+               <option value="lb">Libras</option>
+               <!-- Unidades de temperatura -->
+               <option value="C">Celsius</option>
+               <option value="F">Fahrenheit</option>
+               <option value="K">Kelvin</option>
             </select>
             
             <!-- Botão para realizar a conversão -->
-            <button class="" type="submit" onclick="">Converter</button>
+            <button class="" onclick="converter()">Converter</button>
             
             <!-- Caixa do resultado -->
-            <div id="resultado">
-               <p>Resultado</p>
-            </div>   
+            <div id="resultado"></div>   
          </form>     
       </div>
    </div>
