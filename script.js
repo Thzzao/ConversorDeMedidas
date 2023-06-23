@@ -6,7 +6,7 @@ const uniEntrada = document.getElementById ("uniEntrada").value
 const uniSaida = document.getElementById ("uniSaida").value
 
 
-//funcão que realizará o calculo 
+//funcão que realizará o conversão 
 function converter() {
    //validação dos campos
    if (categoria === "COMP"){
@@ -75,8 +75,10 @@ function converter() {
 }
 
 
-// Funções de conversão COMPRIMENTO
+//Funções contendo as fórmulas dos cálculos 
 
+
+// Funções de conversão COMPRIMENTO
 // Função para converter metros para centímetros
 function metrosParaCentimetros (valor) { 
    const fatorConversao = 100; // 1 metro equivale a 100 centímetros
