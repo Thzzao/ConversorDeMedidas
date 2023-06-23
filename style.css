@@ -11,8 +11,10 @@ body{
    /* display: grid; */
    /* font-size: 18px; */
    font-family: 'Raleway', sans-serif;
-   background-image: url();
-   
+   background-image: url(./img/Stars-galaxy-purple-light-space_1920x1200.jpg) ;
+   background-repeat: no-repeat;
+   background-size: 100%;
+   color: white;
 }
 
 .titulo{
@@ -36,33 +38,36 @@ h1{
 
 a{
 text-decoration: none;
+color: inherit;
+}
+
+a:hover{
+   color: rgb(78, 0, 224);
+   font-weight: 600;
 }
 
 .container{
+   background: rgba(78, 0, 89, 0.1);
+   border-radius: 13px;
+   box-shadow: 0 4px 30px rgb(0, 0, 0);
+   backdrop-filter: blur(3.4px);
+   -webkit-backdrop-filter: blur(3.4px);
+   padding: 3px;
    display: flex;
    justify-content:space-between;
    align-items: flex-start;
    max-width: 900px;
    width: 100%;
    margin: auto;
-   background-image: url(detalhe****);
 }
-
-.categoria{
-   text-align: center;
-}
-
-/* option{
-   text-align: center;
-} */
 
 form{
    background: rgba(76, 0, 255, 0.336);
    border-radius: 13px;
-   box-shadow: 0 8px 32px 0 rgba(255, 170, 12, 0.438);
+   /* box-shadow: 0 8px 32px 0 rgba(255, 170, 12, 0.438); */
    display: flex;
    justify-content: space-between;
-   padding: 40px;
+   padding: 30px;
    width: 420px;
    height: auto;
    flex-direction: column;
@@ -79,11 +84,14 @@ input{
    border-radius: 10px;
    border: none;
    background-color: rgba(158, 153, 182, 0.89);
-   color: rgb(29, 43, 87);
    font-weight: 500;
    padding: 15px;
    font-family: inherit;
    font-size: inherit;
+}
+
+input::placeholder{
+   color: rgba(255, 255, 255, 0.973);
 }
 
 input:focus, select:focus{
@@ -96,16 +104,16 @@ select{
    text-align: center;
    border-radius: 10px;
    border: none;
-   color: rgb(29, 43, 87);
+   color: rgb(0, 45, 243);
+   background-color: rgba(218, 217, 217, 0.932);
    font-weight: 200;
-   
 }
 
 select:hover{
-   /* background: rgba(0, 64, 255, 0.377);  */
-   color: rgb(21, 0, 206);
+   background: rgba(128, 146, 202, 0.651); 
+   color: black;
    border: none;
-   font-weight: 300;
+   font-weight: 500;
 }
 
 button{
@@ -122,8 +130,9 @@ button{
 }
 
 button:hover{
-   background: rgba(44, 63, 133, 0.801);;
+   background: rgba(97, 0, 224, 0.616);
    border: none;
+   color:black
 }
 
 .trocaUnidade{
@@ -135,7 +144,8 @@ button:hover{
 }
 
 #resultado{
-   color: rgb(29, 43, 87);
+   margin-top: 8px;
+   color: rgb(174, 0, 255);
    font-size: 20px;
    font-weight: 700;
    text-align: center;
