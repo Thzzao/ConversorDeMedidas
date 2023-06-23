@@ -10,8 +10,16 @@
    <!-- Junção das páginas de css e js -->
    <script src="./script.js" defer></script>
    <link rel="stylesheet" href="./style.css">
+   <style>
+      /*Remove as setas de incremento/decremento nos campos de número*/
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;    /*Remove a aparência padrão */
+      }
+   </style>
    <!-- Título da página -->
    <title>Conversor de Unidades</title>
+
 </head>
 <body>
    <!-- Divisão do título e do formulário -->
@@ -21,23 +29,24 @@
          <h1>Conversor de <br> unidades</h1>
          <p>By <a href="https://github.com/Thzzao">Thiago Souza</a></p>
       </div>
-      <!-- Divisão para melhor estilização do formulário -->
-      <div class="formulario">
-         <form>
-            <label for="categoria">Selecione a categoria:</label>
-            <!-- Seleção da categoria da conversão -->
-            <select id="categoria" onchange="atualizarUniEntrada()">
-               <option value="COMP">Comprimento</option>
-               <option value="PESO">Peso</option>
-               <option value="TEMP">Temperatura</option>
-            </select>
-            
-            <label for="valor" >Quero converter:</label>
-            <!-- Entrada do valor -->
-            <input type="number" id="valor" placeholder="Digite o valor" required />
-            
+      <!-- Formulário -->
+      <form>
+         <label for="categoria">Selecione a categoria:</label>
+         <!-- Seleção da categoria da conversão -->
+         <select id="categoria" onchange="atualizarUniEntrada()">
+            <option value="COMP">Comprimento</option>
+            <option value="PESO">Peso</option>
+            <option value="TEMP">Temperatura</option>
+         </select>
+         
+         <label for="valor" >Quero converter:</label>
+         <!-- Entrada do valor -->
+         <input type="number" id="valor" placeholder="Digite o valor" required />
+         
+         <!-- Divisão para deixar as unidades uma do lado da outra -->
+         <div class="trocaUnidade"> 
             <!-- Seleção da unidade de entrada -->
-            <label for="uniEntrada">De:</label>
+            <!-- <label for="uniEntrada"></label> -->
             <Select id="uniEntrada" onchange="atualizarUniDestino()">   
                <!-- Unidades de comprimento -->
                <option value="m">Metros</option>
@@ -53,7 +62,7 @@
                <option value="K">Kelvin</option>
             </select>
             
-            <label for="uniSaida" >Para:</label>
+            <label for="uniSaida" > → </label>
             <!-- Seleção da unidade de saída -->
             <Select id="uniSaida">
                <!-- Unidades de comprimento -->
@@ -69,13 +78,14 @@
                <option value="F">Fahrenheit</option>
                <option value="K">Kelvin</option>
             </select>
-            
-            <!-- Botão para realizar a conversão -->
-            <button class="" onclick="converter()">Converter</button>
-            
-            <!-- Caixa do resultado -->
-            <div id="resultado"></div>   
-         </form>     
-      </div>
+         </div> 
+         
+         <!-- Botão para realizar a conversão -->
+         <button class="" onclick="converter()">Converter</button>
+         
+         <!-- Caixa do resultado -->
+         <div id="resultado"></div>   
+      </form>     
    </div>
-</body></html>
+</body>
+</html>
