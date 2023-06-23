@@ -8,8 +8,6 @@ const uniSaida = document.getElementById ("uniSaida").value
 
 //funcão que realizará o calculo 
 function converter() {
-
-
    //validação dos campos
    if (categoria === "COMP"){
       if (uniEntrada === "m" & uniSaida === "cm"){
@@ -55,10 +53,24 @@ function converter() {
       }
    }
    else { //categoria === "TEMP"
-      if (uniEntrada === "c" & uniSaida ==="f"){
+      if (uniEntrada === "C" & uniSaida ==="F"){
          celsiusParaFahren()
       }
-      else if
+      else if (uniEntrada === "F" & uniSaida ==="C"){
+         fahrenParaCelsius()
+      }
+      else if (uniEntrada === "K" & uniSaida ==="F"){
+         kelvinParaFahren()
+      }
+      else if (uniEntrada === "F" & uniSaida ==="K"){
+         fahrenParaKelvin()
+      }
+      else if (uniEntrada === "C" & uniSaida ==="K"){
+         celsiusParaKelvin()
+      }
+      else if (uniEntrada === "K" & uniSaida ==="C"){
+         kelvinParaCelsius()
+      }
    }
 }
 
@@ -183,7 +195,28 @@ function fahrenParaCelsius (valor) {
 
 // Função para converter kelvin para fahren
 function kelvinParaFahren (valor) { 
-   const fahren = 
+   const fahren = 1.8 * (valor - 273) + 32
    // Exibir o resultado na página HTML
    document.getElementById("resultado").textContent = `${valor} Kelvin equivalem a ${fahren} graus Fahrenheit.`;
+}
+
+// Função para converter fahren para kelvin
+function fahrenParaKelvin (valor) { 
+   const kelvin = (valor + 459.67) * 5/9
+   // Exibir o resultado na página HTML
+   document.getElementById("resultado").textContent = `${valor} graus Fahrenheit equivalem a ${kelvin} Kelvin`;
+}
+
+// Função para converter celsius para kelvin
+function celsiusParaKelvin (valor) { 
+   const kelvin = valor + 273
+   // Exibir o resultado na página HTML
+   document.getElementById("resultado").textContent = `${valor} graus Celsius equivalem a ${kelvin} Kelvin`;
+}
+
+// Função para converter kelvin para celsius
+function kelvinParaCelsius (valor) { 
+   const celsius = valor - 273
+   // Exibir o resultado na página HTML
+   document.getElementById("resultado").textContent = `${valor} Kelvin equivalem a ${celsius} graus Celsius`;
 }
