@@ -1,3 +1,5 @@
+/*    PÁGINA DE ESTILOS DO CONVERSOR DE UNIDADES     */
+
 /* reset css */
 *{
    margin: 0;
@@ -7,148 +9,161 @@
    text-decoration: none;
 }
 
+/* Estilização geral da página */
 body{
-   /* display: grid; */
-   /* font-size: 18px; */
    font-family: 'Raleway', sans-serif;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
    background-image: url(./img/Stars-galaxy-purple-light-space_1920x1200.jpg) ;
    background-repeat: no-repeat;
-   background-size: 100%;
-   color: white;
+   background-size: auto;
 }
 
-.titulo{
-   font-size: 20px;
-   padding-right: 100px;
-   /* margin-bottom: 30px; */
-   /* display: flex; */
-   /* flex-direction: column; */
-   /* justify-content: space-between; */
-   /* margin-bottom: auto; */
-}
-
-h1{
-   text-align: left;
-   font-size: 55px;
-   font-weight: bold;
-   /* margin-bottom: 20px; */
-   /* padding-right: 100px; */
-   margin-bottom: 30px;
-}
-
-a{
-text-decoration: none;
-color: inherit;
-}
-
-a:hover{
-   color: rgb(78, 0, 224);
-   font-weight: 600;
-}
-
+/* Estilização da divisória onde contém o título e o formulário */
 .container{
-   background: rgba(78, 0, 89, 0.1);
-   border-radius: 13px;
+   width: 100%;
+   height: 500px;
+   margin: auto;
+   max-width: 1100px;
+   background: rgba(79, 0, 89, 0.281);
+   border-radius: 15px;
+   display: flex;
+   justify-content:space-between;
+   align-items: center;
    box-shadow: 0 4px 30px rgb(0, 0, 0);
    backdrop-filter: blur(3.4px);
    -webkit-backdrop-filter: blur(3.4px);
-   padding: 3px;
-   display: flex;
-   justify-content:space-between;
-   align-items: flex-start;
-   max-width: 900px;
-   width: 100%;
-   margin: auto;
 }
 
+/* Estilização do título */
+.titulo{
+   font-size: 20px;
+   padding-left: 50px;
+   display: flex;
+   flex-direction: column;
+}
+
+/* Estilização do meu nome com o link para o meu github */
+h1{
+   font-size: 55px;
+   text-align: left;
+   font-weight: bold;
+   margin-bottom: 50px;
+}
+
+/* Estilização do link */
+a{
+   text-decoration: none;
+   color: inherit;
+}
+
+/* Estilização do link quando passa o mouse por cima */
+a:hover{
+   color: rgb(0, 4, 224);
+   font-weight: 600;
+}
+
+/* Estilização do formulário */
 form{
+   width: 550px;
+   height: 100%;
+   padding: 30px;
    background: rgba(76, 0, 255, 0.336);
-   border-radius: 13px;
-   /* box-shadow: 0 8px 32px 0 rgba(255, 170, 12, 0.438); */
+   border-radius: 15px;
    display: flex;
    justify-content: space-between;
-   padding: 30px;
-   width: 420px;
-   height: auto;
    flex-direction: column;
-   gap: 10px;
 }
 
+/* Estilização dos seletores */
+select{
+   height: 40px;
+   padding: 5px;
+   font-size: 20px;
+   font-weight: 600;
+   font-family: inherit;
+   text-align: center;
+   border: none;
+   border-radius: 10px;
+   color: rgb(0, 45, 243);
+   background-color: rgba(218, 217, 217, 0.932);
+}
+
+/* Estilização dos seletores quando passa o mouse em cima */
+select:hover{
+   font-weight: 500;
+   background: rgba(128, 146, 202, 0.651); 
+   color: black;
+   border: none;
+}
+
+/* Estilização da entrada do valor */
+input{
+   height: 40px;
+   padding: 15px;
+   font-family: inherit;
+   font-size: inherit;
+   font-weight: 500;
+   border-radius: 10px;
+   border: none;
+   background-color: rgba(158, 153, 182, 0.89);
+}
+
+/* Estilização da escrita da caixa de entrada de valor */
+input::placeholder{
+   color: rgba(255, 255, 255, 0.973);
+}
+
+/* Estilização da borda da caixa de escrita de valor */
+input:focus, select:focus{
+   outline: 0;
+}
+
+/* Estilização dos títulos de cada entrada */
 label{
    font-size: 20px;
    font-weight: 900;
 }
 
-input{
-   height: 40px;
-   border-radius: 10px;
-   border: none;
-   background-color: rgba(158, 153, 182, 0.89);
-   font-weight: 500;
-   padding: 15px;
-   font-family: inherit;
-   font-size: inherit;
+/* Estilização das caixas de unidade */
+.trocaUnidade{
+   padding-top: 10px;
+   padding-bottom: 10px;
+   display: flex;
+   align-items:center;
+   justify-content: space-between;
 }
 
-input::placeholder{
-   color: rgba(255, 255, 255, 0.973);
-}
-
-input:focus, select:focus{
-   outline: 0;
-}
-
-select{
-   height: 40px;
-   font-size: 20px;
-   text-align: center;
-   border-radius: 10px;
-   border: none;
-   color: rgb(0, 45, 243);
-   background-color: rgba(218, 217, 217, 0.932);
-   font-weight: 200;
-}
-
-select:hover{
-   background: rgba(128, 146, 202, 0.651); 
-   color: black;
-   border: none;
-   font-weight: 500;
-}
-
+/* Estilização do botão */
 button{
-   background-color:rgba(96, 56, 243, 0.671);
-   color:rgb(255, 255, 255);
-   text-align: center;
-   border-radius: 10px;
    font-size: 24px;
-   padding: 10px;
+   text-align: center;
    text-decoration: none;
-   font-weight: 550;
+   font-family: inherit;
+   font-weight: bold;
+   padding: 10px;
    border: none;
    outline: none;
+   background-color:rgba(96, 56, 243, 0.671);
+   color:rgb(255, 255, 255);
+   border-radius: 10px;
 }
 
+/* Estilização do botão quando passa o mouse em cima */
 button:hover{
    background: rgba(97, 0, 224, 0.616);
    border: none;
    color:black
 }
 
-.trocaUnidade{
-   display: flex;
-   align-items:center;
-   justify-content: space-between;
-   padding-top: 10px;
-   padding-bottom: 10px;
-}
-
+/* Estilização da frase de resultado */
 #resultado{
+   font-size: 25px;
+   font-weight: bold;
    margin-top: 8px;
-   color: rgb(174, 0, 255);
-   font-size: 20px;
-   font-weight: 700;
    text-align: center;
+   color: rgb(174, 0, 255);
 }
-
-/* Onde usar a tag textarea??? */ 
