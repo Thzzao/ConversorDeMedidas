@@ -1,11 +1,11 @@
-// pegando o valor que foi informado pelo usuário no html e trazendo para o js para fazer a operação
+// Pegando o valor que foi informado pelo usuário no html e trazendo para o js para fazer a operação
 const valor = document.getElementById ("valor")
-// pegando as categorias e as unidades de medida requeridas para o cálculo
+// Pegando as categorias e as unidades de medida requeridas para o cálculo
 const categoria = document.getElementById ("categoria")
 const uniEntrada = document.getElementById ("uniEntrada")
 const uniSaida = document.getElementById ("uniSaida")
 
-//funcão que realizará o conversão 
+// Funcão que realizará o conversão 
 function converter(event) {
    event.preventDefault()
    //validação dos campos
@@ -72,7 +72,7 @@ function converter(event) {
 }
 
 
-//Funções contendo as fórmulas dos cálculos 
+// Funções contendo as fórmulas dos cálculos 
 
 
 // Funções de conversão COMPRIMENTO
