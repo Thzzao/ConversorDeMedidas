@@ -1,75 +1,72 @@
-// pegando o valor que foi dado pelo usuário para fazer o cálculo
-const valor = parseFloat (document.getElementById ("valor").value)
+// pegando o valor que foi informado pelo usuário no html e trazendo para o js para fazer a operação
+const valor = document.getElementById ("valor")
 // pegando as categorias e as unidades de medida requeridas para o cálculo
-const categoria = document.getElementById ("categoria").value
-const uniEntrada = document.getElementById ("uniEntrada").value
-const uniSaida = document.getElementById ("uniSaida").value
-
+const categoria = document.getElementById ("categoria")
+const uniEntrada = document.getElementById ("uniEntrada")
+const uniSaida = document.getElementById ("uniSaida")
 
 //funcão que realizará o conversão 
-function converter() {
+function converter(event) {
+   event.preventDefault()
    //validação dos campos
-   if (categoria === "COMP"){
-      if (uniEntrada === "m" & uniSaida === "cm"){
-         metrosParaCentimetros()
+   if (categoria.value === "COMP"){
+      if (uniEntrada.value === "m" & uniSaida.value === "cm"){
+         metrosParaCentimetros(valor.value)
       }
-      else if (uniEntrada === "cm" & uniSaida ==="m"){
-         centimetrosParaMetros()
+      else if (uniEntrada.value === "cm" & uniSaida.value ==="m"){
+         centimetrosParaMetros(valor.value)
       }
-      else if (uniEntrada === "pol" & uniSaida ==="m"){
-         polegadasParaMetros()
+      else if (uniEntrada.value === "pol" & uniSaida.value ==="m"){
+         polegadasParaMetros(valor.value)
       }
-      else if (uniEntrada === "m" & uniSaida ==="pol"){
-         metrosParaPolegadas()
+      else if (uniEntrada.value === "m" & uniSaida.value ==="pol"){
+         metrosParaPolegadas(valor.value)
       }
-      else if (uniEntrada === "cm" & uniSaida ==="pol"){
-         centimetrosParaPolegadas()
+      else if (uniEntrada.value === "cm" & uniSaida.value ==="pol"){
+         centimetrosParaPolegadas(valor.value)
       }
-      else if (uniEntrada === "pol" & uniSaida ==="cm"){
-         polegadasParaCentimetros()
-      }
-      else if (uniEntrada === uniSaida){
-         document.getElementById("resultado").textContent = `Selecione uma unidade diferente`;
+      else if (uniEntrada.value === "pol" & uniSaida.value ==="cm"){
+         polegadasParaCentimetros(valor.value)
       }
    }
-   else if (categoria === "PESO"){
-      if (uniEntrada === "kg" & uniSaida ==="g"){
-         quiloParaGramas()
+   else if (categoria.value === "PESO"){
+      if (uniEntrada.value === "kg" & uniSaida.value ==="g"){
+         quiloParaGramas(valor.value)
       }
-      else if (uniEntrada === "g" & uniSaida ==="kg"){
-         gramasParaQuilo()
+      else if (uniEntrada.value === "g" & uniSaida.value ==="kg"){
+         gramasParaQuilo(valor.value)
       }
-      else if (uniEntrada === "kg" & uniSaida ==="li"){
-         quiloParaLibras()
+      else if (uniEntrada.value === "kg" & uniSaida.value ==="lb"){
+         quiloParaLibras(valor.value)
       }
-      else if (uniEntrada === "li" & uniSaida ==="kg"){
-         librasParaQuilo()
+      else if (uniEntrada.value === "lb" & uniSaida.value ==="kg"){
+         librasParaQuilo(valor.value)
       }
-      else if (uniEntrada === "g" & uniSaida ==="li"){
-         gramasParaLibras()
+      else if (uniEntrada.value === "g" & uniSaida.value ==="lb"){
+         gramasParaLibras(valor.value)
       }
-      else if (uniEntrada === "li" & uniSaida ==="g"){
-         librasParaGramas()
+      else if (uniEntrada.value === "lb" & uniSaida.value ==="g"){
+         librasParaGramas(valor.value)
       }
    }
    else { //categoria === "TEMP"
-      if (uniEntrada === "C" & uniSaida ==="F"){
-         celsiusParaFahren()
+      if (uniEntrada.value === "C" & uniSaida.value ==="F"){
+         celsiusParaFahren(valor.value)
       }
-      else if (uniEntrada === "F" & uniSaida ==="C"){
-         fahrenParaCelsius()
+      else if (uniEntrada.value === "F" & uniSaida.value ==="C"){
+         fahrenParaCelsius(valor.value)
       }
-      else if (uniEntrada === "K" & uniSaida ==="F"){
-         kelvinParaFahren()
+      else if (uniEntrada.value === "K" & uniSaida.value ==="F"){
+         kelvinParaFahren(valor.value)
       }
-      else if (uniEntrada === "F" & uniSaida ==="K"){
-         fahrenParaKelvin()
+      else if (uniEntrada.value === "F" & uniSaida.value ==="K"){
+         fahrenParaKelvin(valor.value)
       }
-      else if (uniEntrada === "C" & uniSaida ==="K"){
-         celsiusParaKelvin()
+      else if (uniEntrada.value === "C" & uniSaida.value ==="K"){
+         celsiusParaKelvin(valor.value)
       }
-      else if (uniEntrada === "K" & uniSaida ==="C"){
-         kelvinParaCelsius()
+      else if (uniEntrada.value === "K" & uniSaida.value ==="C"){
+         kelvinParaCelsius(valor.value)
       }
    }
 }
@@ -79,6 +76,7 @@ function converter() {
 
 
 // Funções de conversão COMPRIMENTO
+
 // Função para converter metros para centímetros
 function metrosParaCentimetros (valor) { 
    const fatorConversao = 100; // 1 metro equivale a 100 centímetros
@@ -221,4 +219,100 @@ function kelvinParaCelsius (valor) {
    const celsius = valor - 273
    // Exibir o resultado na página HTML
    document.getElementById("resultado").textContent = `${valor} Kelvin equivalem a ${celsius} graus Celsius`;
+}
+
+
+// Função que atualiza as opções conforme a entrada do usuário em categoria
+function atualizarUniEntrada(){
+   if (categoria.value == "COMP"){
+      uniEntrada.innerHTML = ` 
+      <option value="">Selecione a Unidade</option>
+      <option value="m">Metros</option>
+      <option value="cm">Centímetros</option>
+      <option value="pol">Polegadas</option>
+      `
+   }
+   if (categoria.value == "PESO"){
+      uniEntrada.innerHTML = ` 
+      <option value="">Selecione a Unidade</option>
+      <option value="kg">Quilogramas</option>
+      <option value="g">Gramas</option>
+      <option value="lb">Libras</option>
+      `
+   }
+   if (categoria.value == "TEMP"){
+      uniEntrada.innerHTML = ` 
+      <option value="">Selecione a Unidade</option>
+      <option value="C">Celsius</option>
+      <option value="F">Fahrenheit</option>
+      <option value="K">Kelvin</option>
+      `
+   }
+}
+
+// Função que atualiza as opções conforme a entrada do usuário na primeira unidade
+function atualizarUniDestino(){
+   if (uniEntrada.value == "m"){
+      uniSaida.innerHTML = ` 
+      <option value="">Selecione a Unidade</option>
+      <option value="cm">Centímetros</option>
+      <option value="pol">Polegadas</option>
+      `
+   }
+   if (uniEntrada.value == "cm"){
+      uniSaida.innerHTML = ` 
+      <option value="">Selecione a Unidade</option>
+      <option value="m">Metros</option>
+      <option value="pol">Polegadas</option>
+      `
+   }
+   if (uniEntrada.value == "pol"){
+      uniSaida.innerHTML = ` 
+      <option value="">Selecione a Unidade</option>
+      <option value="cm">Centímetros</option>
+      <option value="m">Metros</option>
+      `
+   }
+   if (uniEntrada.value == "kg"){
+      uniSaida.innerHTML = ` 
+      <option value="">Selecione a Unidade</option>
+      <option value="g">Gramas</option>
+      <option value="lb">Libras</option>
+      `
+   }
+   if (uniEntrada.value == "g"){
+      uniSaida.innerHTML = ` 
+      <option value="">Selecione a Unidade</option>
+      <option value="kg">Quilogramas</option>
+      <option value="lb">Libras</option>
+      `
+   }
+   if (uniEntrada.value == "lb"){
+      uniSaida.innerHTML = ` 
+      <option value="">Selecione a Unidade</option>
+      <option value="kg">Quilogramas</option>
+      <option value="g">Gramas</option>
+      `
+   }
+   if (uniEntrada.value == "C"){
+      uniSaida.innerHTML = ` 
+      <option value="">Selecione a Unidade</option>
+      <option value="F">Fahrenheit</option>
+      <option value="K">Kelvin</option>
+      `
+   }
+   if (uniEntrada.value == "F"){
+      uniSaida.innerHTML = ` 
+      <option value="">Selecione a Unidade</option>
+      <option value="C">Celsius</option>
+      <option value="K">Kelvin</option>
+      `
+   }
+   if (uniEntrada.value == "K"){
+      uniSaida.innerHTML = ` 
+      <option value="">Selecione a Unidade</option>
+      <option value="C">Celsius</option>
+      <option value="F">Fahrenheit</option>
+      `
+   }
 }
