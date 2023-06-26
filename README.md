@@ -5,7 +5,7 @@ Segundo projeto individual do curso de Desenvolvedor Full Stack em parceria com 
 O projeto visa a criação de um conversor de comprimento, peso e temperatura que permite converter valores entre diferentes unidades de medida nessas três categorias. 
 Para este projeto foi utilizado *JavaScript*, *HTML* e *CSS*.
 
-Acesse o projeto [clicando aqui](https://thzzao.github.io/ConversorDeMedidasResilia/).
+<h2>Acesse o projeto [clicando aqui](https://thzzao.github.io/ConversorDeMedidasResilia/).</h2>
 
 ## Como usar
 - Primeiro especifique qual a `categoria` que você deseja para fazer a conversão
