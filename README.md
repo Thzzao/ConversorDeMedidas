@@ -1,8 +1,8 @@
 # Conversor De Unidades - Resilia
 
 Segundo projeto individual do curso de Desenvolvedor Full Stack em parceria com a Resilia e o Ebanx - 2023 
-
-O projeto visa a criação de um conversor de comprimento, peso e temperatura utilizando JavaScript, HTML e CSS.
+O projeto visa a criação de um conversor de comprimento, peso e temperatura que permite converter valores entre diferentes unidades de medida nessas três categorias. 
+Para este projeto foi utilizado *JavaScript*, *HTML* e *CSS*.
 
 Acesse o projeto [clicando aqui](https://thzzao.github.io/ConversorDeMedidasResilia/).
 
@@ -24,6 +24,8 @@ Acesse o projeto [clicando aqui](https://thzzao.github.io/ConversorDeMedidasResi
 - `script.js`: Arquivo principal do projeto em que contém toda a lógica para converter
 - `style.css`: Arquivo usado para estilizar a págian do projeto
 - `img`: Pasta usada para armazenar a imagem de fundo do site
+
+
 
 
 
