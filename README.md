@@ -1,6 +1,7 @@
 # Conversor De Unidades - Resilia
 
-Segundo projeto individual do curso de Desenvolvedor Full Stack em parceria com a Resilia e o Ebanx - 2023 
+Segundo projeto individual do curso de Desenvolvedor Full Stack em parceria com a Resilia e o Ebanx - 2023.
+
 O projeto visa a criação de um conversor de comprimento, peso e temperatura que permite converter valores entre diferentes unidades de medida nessas três categorias. 
 Para este projeto foi utilizado *JavaScript*, *HTML* e *CSS*.
 
