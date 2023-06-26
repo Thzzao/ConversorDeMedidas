@@ -8,9 +8,9 @@ Acesse o projeto [clicando aqui](https://thzzao.github.io/ConversorDeMedidasResi
 
 ## Como usar
 - Primeiro especifique qual a `categoria` que você deseja para fazer a conversão
-- Depois digite o valor que você deseja converter
-- Selecione a unidade de entrada do valor e a unidade de saída
-- SAperte o botão `converter` para que o cálculo seja realizado e retorne o resultado
+- Depois digite o `valor` que você deseja converter
+- Selecione a `unidade de entrada` do valor e a `unidade de saída`
+- Aperte o botão `converter` para que o cálculo seja realizado e retorne o resultado
 
 ## Unidades utilizadas 
 | Comprimento | Peso | Temperatura |
@@ -20,10 +20,10 @@ Acesse o projeto [clicando aqui](https://thzzao.github.io/ConversorDeMedidasResi
 |Polegadas|Libras|Kelvin|
 
 ## Estrutura do projeto
-- 'index.html': Arquivo principal da página onde contém toda a formatação do site
-- 'script.js': Arquivo principal do projeto em que contém toda a lógica para converter
-- 'style.css': Arquivo usado para estilizar a págian do projeto
-- 'img': Pasta usada para armazenar a imagem de fundo do site
+- `index.html`: Arquivo principal da página onde contém toda a formatação do site
+- `script.js`: Arquivo principal do projeto em que contém toda a lógica para converter
+- `style.css`: Arquivo usado para estilizar a págian do projeto
+- `img`: Pasta usada para armazenar a imagem de fundo do site
 
 
 
