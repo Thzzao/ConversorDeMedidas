@@ -4,5 +4,6 @@
 O projeto visa a criação de um conversor de cumprimento, peso e temperatura utilizando JavaScript, HTML e CSS.
 
 ##Como usar
+
 Primeiro especifique qual a `categoria` que você deseja para fazer a conversão
 
