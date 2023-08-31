@@ -26,6 +26,10 @@ Acesse o projeto [clicando aqui](https://thzzao.github.io/ConversorDeMedidasResi
 - `style.css`: Arquivo usado para estilizar a págian do projeto
 - `img`: Pasta usada para armazenar a imagem de fundo do site
 
+## Autor 
+
+Feito por [Thzzao](https://github.com/Thzzao) 🤙
+
 
 
 
